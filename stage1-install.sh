@@ -35,10 +35,10 @@ noconf() {
 
 	headerPrint
 
-	printf "Welcome to gendeploy!\n\
+	printf "Welcome to gentoo help!\n\
 \n\
-This script will install Gentoo for you.\n\
-But, before we can start, I must ask you a few questions.\n\n"
+This script will NOT install Gentoo for you.\n\
+This is just to check your specs .\n\n"
 
 	# UEFI/BIOS check
 
@@ -69,7 +69,7 @@ But, before we can start, I must ask you a few questions.\n\n"
 		printf "Would you like to run net-setup? (Y/n) "
 		read -r yn
 		case $yn in
-			[Nn]*) die "no gentoo install 4 u ;__;" ;;
+			[Nn]*) die "no gentoo help 4 u ;__;" ;;
 			*) net-setup eth0
 				printf "Alright, let's try again.\n"
 				[ "$(ping -c 3 gentoo.org)" ] || die "That's still not right, I've had enough."
